@@ -1,7 +1,7 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.jsx',
+  entry: './src/js/index.jsx',
   resolve: { extensions: ['.js', '.jsx'] },
   module: {
     rules: [
@@ -31,8 +31,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebPackPlugin({
-      template: './html/index.html',
-      filename: '.build/index.html',
+      template: 'src/html/index.html',
+      filename: 'index.html',
     }),
   ],
 };

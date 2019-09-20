@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "flow": "flow",
-    "start": "webpack-dev-server --mode development --open",
+    "start:dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production"
   },
   "repository": {
@@ -18,7 +18,7 @@
     "url": "https://github.com/BrunoViera/mibus/issues"
   },
   "homepage": "https://github.com/BrunoViera/mibus#readme",
-  "dependencies": {
+  "devDependencies": {
     "@babel/core": "^7.6.0",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-flow": "^7.0.0",
