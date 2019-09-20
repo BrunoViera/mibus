@@ -1,0 +1,46 @@
+{
+  "name": "mibus",
+  "version": "1.0.0",
+  "description": "just a place to play",
+  "main": "index.js",
+  "scripts": {
+    "flow": "flow",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BrunoViera/mibus.git"
+  },
+  "author": "Bruno Viera, Javier Dominguez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrunoViera/mibus/issues"
+  },
+  "homepage": "https://github.com/BrunoViera/mibus#readme",
+  "dependencies": {
+    "@babel/core": "^7.6.0",
+    "@babel/preset-env": "^7.6.0",
+    "@babel/preset-flow": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-recharts": "^1.2.0",
+    "eslint": "^6.4.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-flowtype": "^4.3.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.14.3",
+    "flow-bin": "^0.108.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "url-loader": "^2.1.0",
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.1"
+  }
+}
