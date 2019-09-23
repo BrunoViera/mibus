@@ -42,5 +42,37 @@ module.exports = {
       template: 'src/html/index.html',
       filename: 'index.html',
     }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/signin.html',
+      filename: 'signin.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/buy.html',
+      filename: 'buy.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/buy-confirm.html',
+      filename: 'buy-confirm.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/buy-payment.html',
+      filename: 'buy-payment.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/tickets.html',
+      filename: 'tickets.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/tickets-detail.html',
+      filename: 'tickets-detail.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/tickets-update.html',
+      filename: 'tickets-update.html',
+    }),
+    new HtmlWebPackPlugin({
+      template: 'src/html/profile.html',
+      filename: 'profile.html',
+    }),
   ],
 };

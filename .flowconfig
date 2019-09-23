@@ -20,5 +20,6 @@
 
 [options]
 all=true
+module.file_ext=.scss
 
 [strict]
