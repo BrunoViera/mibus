@@ -1,0 +1,17 @@
+.footer {
+  bottom: 10;
+  left: 0;
+  position: fixed;
+  width: 100%;
+}
+
+.footer__btn-list {
+  background-color: $white;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: auto;
+  width: 380px;
+}

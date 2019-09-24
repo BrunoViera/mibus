@@ -1,0 +1,13 @@
+.select {
+  background-color: $white;
+  color: $grey;
+  font-size: .9375rem;
+  line-height: 18px;
+  margin-bottom: 24px;
+  padding: 20px 25px;
+  width: 100%;
+
+  &--mb40 {
+    margin-bottom: 40px;
+  }
+}
