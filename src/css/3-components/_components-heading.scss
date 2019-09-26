@@ -1,11 +1,20 @@
 .heading {
   background-color: $white;
+  display: flex;
   margin: 0 -20px 20px;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
 }
 
+.heading__icon {
+  align-self: center;
+  margin-right: 90px;
+}
+
 .heading__title {
-  font-size: 1.5rem;
-  line-height: 29px;
+  p {
+    font-size: 1.5rem;
+    line-height: 29px;
+    margin: 0;
+  }
 }

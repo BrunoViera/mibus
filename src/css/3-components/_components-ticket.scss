@@ -1,0 +1,73 @@
+.ticket {
+  background-color: $ticket-background;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  &--current {
+    background-color: $white;
+  }
+
+  &--no-margin {
+    margin: 0;
+  }
+}
+
+.ticket__route {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ticket__description {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+
+  &.is-vertical {
+    flex-direction: column;
+
+    .ticket__seat {
+      text-align: left;
+    }
+  }
+}
+
+.ticket__date,
+.ticket__bus,
+.ticket__seat {
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.ticket__date,
+.ticket__seat {
+  margin-top: 0;
+  width: 50%;
+}
+
+.ticket__seat {
+  text-align: right;
+}
+
+.ticket__bus {
+  margin: 0;
+}
+
+.route__from {
+  margin-bottom: 15px;
+}
+
+.route__pretitle,
+.ticket__pretitle {
+  color: $blue;
+  font-size: .75rem;
+  line-height: 14px;
+  margin: 0 0 10px;
+}
+
+.route__title {
+  font-size: 1rem;
+  line-height: 19px;
+  margin: 0;
+}

@@ -6,4 +6,16 @@
   padding: 20px 50px;
   text-transform: uppercase;
   width: 100%;
+
+  &--mt40 {
+    margin-top: 40px;
+  }
+
+  &--mt70 {
+    margin-top: 70px;
+  }
+
+  &--blue {
+    background-color: $blue;
+  }
 }
