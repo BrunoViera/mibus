@@ -1,0 +1,33 @@
+.btn-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.btn-group__button {
+  background-color: $white;
+  border-bottom: 3px solid $dark-grey;
+  border-radius: 0;
+  padding: 20px 50px;
+  width: 187px;
+
+  &:nth-child(1) {
+    border-right: 1px solid $light-grey;
+  }
+
+  &.is-active {
+    border-bottom-color: $blue;
+
+    .btn-group__text {
+      color: $dark-grey;
+    }
+  }
+}
+
+.btn-group__text {
+  margin: 0;
+  color: $dark-grey;
+  font-size: .8125rem;
+  line-height: 13px;
+  text-transform: uppercase;
+}

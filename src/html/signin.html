@@ -6,28 +6,32 @@
     <title>MiBus</title>
 </head>
 <body>
-    <div class="btn-group">
-        <button class="active">Registrarse</button>
-        <button>Ingresar</button>
-    </div>
+    <div class="layout is-signin">
+        <div class="btn-group">
+            <button class="btn-group__button is-active"><p class="btn-group__text">Registrarse</p></button>
+            <button class="btn-group__button"><p class="btn-group__text">Ingresar</p></button>
+        </div>
 
-    <div class="sigin-wrapper">
-        <input type="text" name="name" placeholder="Nombre">
-        <input type="email" name="email" placeholder="Correo Electrónico">
-        <input type="password" name="name" placeholder="Contraseña">
-        <button>Continuar</button>
-    </div>
+        <div class="signin-container">
+            <input type="text" name="name" placeholder="Nombre">
+            <input type="email" name="email" placeholder="Correo Electrónico">
+            <input type="password" name="name" placeholder="Contraseña">
+            <button class="btn">Continuar</button>
+        </div>
 
-    <div class="btn-group">
-        <button>Registrarse</button>
-        <button  class="active">Ingresar</button>
-    </div>
+        <div class="btn-group">
+            <button class="btn-group__button"><p class="btn-group__text">Registrarse</p></button>
+            <button class="btn-group__button is-active"><p class="btn-group__text">Ingresar</p></button>
+        </div>
 
-    <div class="sigin-wrapper">
-        <input type="email" name="email" placeholder="Correo Electrónico">
-        <input type="password" name="name" placeholder="Contraseña">
-        <a href="#">Olvide mi contraseña</a>
-        <button>Continuar</button>
+        <div class="signin-container">
+            <input type="email" name="email" placeholder="Correo Electrónico">
+            <input type="password" name="name" placeholder="Contraseña">
+            <div class="link-wrapper">
+                <a href="#">Olvide mi contraseña</a>
+            </div>
+            <button class="btn">Continuar</button>
+        </div>
     </div>
 </body>
 </html>
