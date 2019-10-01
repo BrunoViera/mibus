@@ -11,3 +11,7 @@ To run as dev
 To generate the build to deploy
 
 `> npm run build`
+
+To check flow error
+
+`> npm run flow`
