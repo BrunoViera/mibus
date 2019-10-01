@@ -1,6 +1,9 @@
 const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+  devServer: {
+    https: true,
+  },
   entry: './src/js/index.jsx',
   resolve: { extensions: ['.js', '.jsx'] },
   module: {
