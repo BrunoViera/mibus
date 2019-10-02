@@ -6,7 +6,7 @@
   ],
   "rules": {
     "max-len": ["error", {
-      "code": 120
+      "code": 130
       }],
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn"
