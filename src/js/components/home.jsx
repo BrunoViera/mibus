@@ -38,6 +38,8 @@ export default function Home() {
               }
             },
           );
+      } else {
+        setShowSplash(0);
       }
     });
   } else {
@@ -48,7 +50,7 @@ export default function Home() {
 
   // if no user has a valid sign in the app show the login page
 
-  console.log('cuerpo del componente');
+  console.log('cuerpo del componente', user);
   // const origenes = firebase.firestore().collection('origen');
   // origenes.get().then((docs) => {
   //   console.log('muestro datos');
