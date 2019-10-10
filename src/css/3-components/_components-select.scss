@@ -1,10 +1,29 @@
+.select-container {
+  position: relative;
+}
+
+.select-icon {
+  left: 30px;
+  position: absolute;
+  top: 18px;
+
+  &--pull-right {
+    left: auto;
+    right: 30px;
+  }
+
+  &--arrow {
+    top: 25px;
+  }
+}
+
 .select {
   background-color: $white;
   color: $grey;
   font-size: .9375rem;
   line-height: 18px;
   margin-bottom: 24px;
-  padding: 20px 25px;
+  padding: 20px 25px 20px 70px;
   width: 100%;
 
   &--mb40 {
