@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import firebase from './db';
 import Login from './login';
 import Dashboard from './dashboard';
+import { UsersProvider } from '../contexts/userContext';
 
 export default function Home() {
   const [showSplash, setShowSplash] = useState(1);
@@ -59,18 +60,18 @@ export default function Home() {
 
 
   function renderContent() {
-    if (user === null && showSplash) {
-      return (
-        <div>
-          <h1>MiBus</h1>
-          <p>estamos cargando la aplicación, estará lista en segundos ...</p>
-        </div>
-      );
-    } if (user) {
-      return <Dashboard />;
-    }
+    // if (user === null && showSplash) {
+    //   return (
+    //     <div>
+    //       <h1>MiBus</h1>
+    //       <p>estamos cargando la aplicación, estará lista en segundos ...</p>
+    //     </div>
+    //   );
+    // } if (user) {
+    return <UsersProvider><Dashboard /></UsersProvider>;
+    // }
 
-    return <Login />;
+    // return <Login />;
   }
 
   return (
