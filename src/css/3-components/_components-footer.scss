@@ -13,15 +13,15 @@
   flex-wrap: wrap;
   justify-content: center;
   margin: auto;
-  width: 380px;
+  width: 90%;
 }
 
 .btn-list__item {
-  padding: 30px 45px;
+  padding: 30px 40px;
 
   &.is-home {
     height: 30px;
-    padding: 34px 45px;
+    padding: 34px 35px;
   }
 
   &:not(:nth-child(1)) {
