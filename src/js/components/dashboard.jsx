@@ -2,9 +2,16 @@
 
 import React from 'react';
 
-import firebase from './db';
+import firebase from '../firebase';
+import useGlobalStatus from '../hooks/useGlobaStatus';
 
 export default function dashboard() {
+  const { getUser } = useGlobalStatus();
+  const user = getUser();
+
+  console.log(user);
+
+
   function logout() {
     firebase.auth().signOut()
       .then(() => {
@@ -26,6 +33,13 @@ export default function dashboard() {
         <div className="heading__title">
           <p className="heading__title">Mis Pasajes</p>
         </div>
+        <ul>
+          { user.tickets.map((ticket) => (
+            <div className="box">
+              {ticket.date}
+            </div>
+          ))}
+        </ul>
       </div>
     </div>
   );
