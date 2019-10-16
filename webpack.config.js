@@ -3,6 +3,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
   devServer: {
     https: true,
+    historyApiFallback: true,
   },
   entry: './src/js/index.jsx',
   resolve: { extensions: ['.js', '.jsx'] },
@@ -36,6 +37,20 @@ module.exports = {
           'style-loader',
           'css-loader',
           'sass-loader',
+        ],
+      },
+      {
+        test: /\.svg$/,
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'react-svg-loader',
+            options: {
+              jsx: true,
+            },
+          },
         ],
       },
     ],
