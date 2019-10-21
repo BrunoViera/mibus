@@ -64,4 +64,4 @@ typings/
 dist/*
 !dist/.gitkeep
 .vscode/
-src/js/components/db.js
+src/js/firebase.js
