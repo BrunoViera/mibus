@@ -17,7 +17,7 @@ export default function Login() {
             .then(
               (doc) => {
                 if (doc.exists) {
-                  setUser(doc.data());
+                  setUser(doc);
                 // setShowSplash(0);
                 } else {
                   const newUser = {
