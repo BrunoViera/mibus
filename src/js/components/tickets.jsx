@@ -1,8 +1,7 @@
 import React from 'react';
 
-import Header from './header';
-import Footer from './footer';
-import Ticket from './ticket';
+import Header from './Header';
+import Ticket from './Ticket';
 
 export default function Tickets() {
   const listTickets = [
@@ -41,7 +40,6 @@ export default function Tickets() {
       {
         listTickets.map((ticket) => <Ticket key={ticket.id} ticket={ticket} />)
       }
-      <Footer />
     </div>
   );
 }

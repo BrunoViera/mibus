@@ -5,9 +5,10 @@ import React from 'react';
 import firebase from '../firebase';
 import useGlobalStatus from '../hooks/useGlobaStatus';
 
-export default function dashboard() {
-  const { getUser } = useGlobalStatus();
+export default function Dashboard() {
+  const { getUser, getTickets } = useGlobalStatus();
   const user = getUser();
+  const tickets = getTickets();
 
   console.log(user);
 
@@ -34,7 +35,7 @@ export default function dashboard() {
           <p className="heading__title">Mis Pasajes</p>
         </div>
         <ul>
-          { user.tickets.map((ticket) => (
+          { tickets.map((ticket) => (
             <div className="box">
               {ticket.date}
             </div>

@@ -8,16 +8,23 @@ const useGlobalStatus = () => {
 
   function getUser() {
     if (state.user) {
-      return state.user;
+      return state.user.data();
     }
     return null;
+  }
+
+  function getTickets() {
+    // if (state.user.collection('tickets')) {
+    //   return state.user.userRef.collection('tickets').getDocuments();
+    // }
+    return [];
   }
 
   function setUser(user) {
     setState((state) => ({ ...state, user }));
   }
 
-  function setLoading(loading) {
+  function showLoading(loading) {
     setState((state) => ({ ...state, isLoading: loading }));
   }
 
@@ -28,8 +35,9 @@ const useGlobalStatus = () => {
   return {
     getUser,
     setUser,
-    setLoading,
     isLoading,
+    showLoading,
+    getTickets,
   };
 };
 

@@ -6,41 +6,40 @@ import firebase from '../firebase';
 import useGlobalStatus from '../hooks/useGlobaStatus';
 
 export default function Login() {
-  const { setUser, getUser } = useGlobalStatus();
-  const user = getUser();
+  const { setUser, showLoading } = useGlobalStatus();
 
-  useEffect(() => {
-    if (user === null) {
-      firebase.auth().onAuthStateChanged((logedUser) => {
-        if (logedUser && logedUser.uid) {
-          firebase.firestore().collection('usuario').doc(logedUser.uid).get()
-            .then(
-              (doc) => {
-                if (doc.exists) {
-                  setUser(doc);
-                // setShowSplash(0);
-                } else {
-                  const newUser = {
-                    nombre: logedUser.displayName,
-                    email: logedUser.email,
-                    tickets: {},
-                  };
+  function initComponent() {
+    firebase.auth().onAuthStateChanged((logedUser) => {
+      if (logedUser && logedUser.uid) {
+        firebase.firestore().collection('usuario').doc(logedUser.uid).get()
+          .then(
+            (doc) => {
+              if (doc.exists) {
+                setUser(doc);
+                showLoading(false);
+              } else {
+                const newUser = {
+                  nombre: logedUser.displayName,
+                  email: logedUser.email,
+                  tickets: {},
+                };
 
-                  doc.ref.set(newUser).then((e) => {
-                    setUser(newUser);
-                  // setShowSplash(0);
-                  }).catch((error) => {
-                    console.error(error);
-                  });
-                }
-              },
-            );
-        } else {
-        // setShowSplash(0);
-        }
-      });
-    }
-  });
+                doc.ref.set(newUser).then(() => {
+                  setUser(newUser);
+                  showLoading(false);
+                }).catch((error) => {
+                  console.error(error);
+                });
+              }
+            },
+          );
+      } else {
+        showLoading(false);
+      }
+    });
+  }
+
+  useEffect(initComponent, []);
 
   function loginGoogle() {
     const provider = new firebase.auth.GoogleAuthProvider();
