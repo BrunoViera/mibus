@@ -21,8 +21,6 @@ function App() {
   useEffect(init, []);
 
   function renderView() {
-    console.log('render');
-
     let view = <Login />;
 
     if (getUser()) {
