@@ -9,25 +9,26 @@ import ProfileIcon from '../../icons/profile.svg';
 import AgendaIcon from '../../icons/agenda.svg';
 
 export default function Footer() {
-  const path = window.location.pathname;
   const links = [
     { icon: <AgendaIcon />, path: '/tickets' },
-    { icon: <HomeIcon />, path: '/' },
+    { icon: <HomeIcon />, path: '/', modifier: 'is-home-nav' },
     { icon: <ProfileIcon />, path: '/profile' },
   ];
-
-  console.log('pinto footer', path);
-
 
   return (
     <div className="footer">
       <div className="footer__btn-list">
         {
           links.map((link) => (
-            <Link key={link.path} to={link.path}>
-              <div className={`btn-list__item ${link.path === path ? 'is-home' : ''}`}>
-                {link.icon}
-              </div>
+            <Link
+              key={link.path}
+              to={link.path}
+              className={
+                `btn-list__item ${link.modifier ? link.modifier : ''}
+                ${window.location.pathname === link.path ? 'is-active' : ''}`
+              }
+            >
+              {link.icon}
             </Link>
           ))
         }

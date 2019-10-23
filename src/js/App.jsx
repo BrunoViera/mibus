@@ -5,12 +5,12 @@ import { Route, Switch } from 'react-router-dom';
 
 import useGlobalStatus from './hooks/useGlobaStatus';
 
-import Footer from './components/Footer';
+import Footer from './components/footer';
 import Spinner from './components/Spinner';
-import Login from './components/Login';
-import Tickets from './components/Tickets';
+import Login from './components/login';
+import Tickets from './components/tickets';
 import BuyTicket from './components/BuyTicket';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/dashboard';
 
 function App() {
   const { getUser, showLoading } = useGlobalStatus();
