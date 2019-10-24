@@ -16,9 +16,6 @@ export default function Footer() {
     { icon: <ProfileIcon />, path: '/profile' },
   ];
 
-  console.log('pinto footer', path);
-
-
   return (
     <div className="footer">
       <div className="footer__btn-list">

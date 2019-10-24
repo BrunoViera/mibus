@@ -8,9 +8,9 @@ import useGlobalStatus from './hooks/useGlobaStatus';
 import Footer from './components/Footer';
 import Spinner from './components/Spinner';
 import Login from './components/Login';
+import Profile from './components/Profile';
 import Tickets from './components/Tickets';
 import BuyTicket from './components/BuyTicket';
-import Dashboard from './components/Dashboard';
 
 function App() {
   const { getUser, showLoading } = useGlobalStatus();
@@ -35,7 +35,11 @@ function App() {
             <Footer />
           </Route>
           <Route exact path="/">
-            <Dashboard />
+            <BuyTicket />
+            <Footer />
+          </Route>
+          <Route exact path="/profile">
+            <Profile />
             <Footer />
           </Route>
         </Switch>
