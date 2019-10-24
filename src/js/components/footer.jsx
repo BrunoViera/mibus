@@ -11,7 +11,7 @@ import AgendaIcon from '../../icons/agenda.svg';
 export default function Footer() {
   const links = [
     { icon: <AgendaIcon />, path: '/tickets' },
-    { icon: <HomeIcon />, path: '/', modifier: 'is-home-nav' },
+    { icon: <HomeIcon />, path: '/', class: 'is-home-nav' },
     { icon: <ProfileIcon />, path: '/profile' },
   ];
 
@@ -24,7 +24,7 @@ export default function Footer() {
               key={link.path}
               to={link.path}
               className={
-                `btn-list__item ${link.modifier ? link.modifier : ''}
+                `btn-list__item ${link.class ? link.class : ''}
                 ${window.location.pathname === link.path ? 'is-active' : ''}`
               }
             >
