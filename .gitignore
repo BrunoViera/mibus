@@ -65,4 +65,3 @@ dist/*
 !dist/.gitkeep
 .vscode/
 src/js/modules/db.js
-
