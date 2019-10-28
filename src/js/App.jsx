@@ -5,11 +5,11 @@ import { Route, Switch } from 'react-router-dom';
 
 import useGlobalStatus from './hooks/useGlobaStatus';
 
-import Footer from './components/Footer';
+import Footer from './components/footer';
 import Spinner from './components/Spinner';
-import Login from './components/Login';
+import Login from './components/login';
 import Profile from './components/Profile';
-import Tickets from './components/Tickets';
+import Tickets from './components/tickets';
 import BuyTicket from './components/BuyTicket';
 
 function App() {

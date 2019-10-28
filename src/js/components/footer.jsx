@@ -9,10 +9,9 @@ import ProfileIcon from '../../icons/profile.svg';
 import AgendaIcon from '../../icons/agenda.svg';
 
 export default function Footer() {
-  const path = window.location.pathname;
   const links = [
     { icon: <AgendaIcon />, path: '/tickets' },
-    { icon: <HomeIcon />, path: '/' },
+    { icon: <HomeIcon />, path: '/', class: 'is-home-nav' },
     { icon: <ProfileIcon />, path: '/profile' },
   ];
 
@@ -21,10 +20,15 @@ export default function Footer() {
       <div className="footer__btn-list">
         {
           links.map((link) => (
-            <Link key={link.path} to={link.path}>
-              <div className={`btn-list__item ${link.path === path ? 'is-home' : ''}`}>
-                {link.icon}
-              </div>
+            <Link
+              key={link.path}
+              to={link.path}
+              className={
+                `btn-list__item ${link.class ? link.class : ''}
+                ${window.location.pathname === link.path ? 'is-active' : ''}`
+              }
+            >
+              {link.icon}
             </Link>
           ))
         }

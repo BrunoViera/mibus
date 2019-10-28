@@ -2,8 +2,8 @@
 
 import React from 'react';
 
-import Header from './Header';
-import Ticket from './Ticket';
+import Header from './header';
+import Ticket from './ticket';
 import useGlobalStatus from '../hooks/useGlobaStatus';
 
 export default function Tickets() {
