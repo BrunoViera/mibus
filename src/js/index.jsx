@@ -7,7 +7,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import '../css/style.scss';
 
 import App from './App';
-import { AppProvider } from './AppContext';
+import { AppProvider } from './contexts/AppContext';
 
 const appDiv = document.getElementById('app');
 

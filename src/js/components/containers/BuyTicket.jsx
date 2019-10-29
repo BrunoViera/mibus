@@ -2,7 +2,8 @@
 
 import React from 'react';
 
-import Header from './header';
+import Header from '../presentational/Header';
+import Footer from '../presentational/Footer';
 
 export default function BuyTicket() {
   return (
@@ -127,6 +128,8 @@ export default function BuyTicket() {
       </div>
 
       <button type="button" className="btn">Finalizar</button>
+
+      <Footer />
     </div>
   );
 }

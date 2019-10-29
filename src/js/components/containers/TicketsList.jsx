@@ -2,9 +2,10 @@
 
 import React from 'react';
 
-import Header from './header';
-import Ticket from './ticket';
-import useGlobalStatus from '../hooks/useGlobaStatus';
+import Header from '../presentational/Header';
+import Footer from '../presentational/Footer';
+import Ticket from '../presentational/Ticket';
+import useGlobalStatus from '../../hooks/useGlobaStatus';
 
 export default function Tickets() {
   const { getTickets } = useGlobalStatus();
@@ -15,6 +16,7 @@ export default function Tickets() {
       {
         getTickets().map((ticket) => <Ticket key={ticket.id} ticket={ticket} />)
       }
+      <Footer />
     </div>
   );
 }

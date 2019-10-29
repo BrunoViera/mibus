@@ -1,7 +1,7 @@
 // @flow
 
 import { useContext } from 'react';
-import { AppContext } from '../AppContext';
+import { AppContext } from '../contexts/AppContext';
 
 const useGlobalStatus = () => {
   const [state, setState] = useContext(AppContext);
@@ -49,6 +49,18 @@ const useGlobalStatus = () => {
     ];
   }
 
+  function getTicket() {
+    return {
+      id: 1,
+      from: 'Montevideo, Terminal Tres Cruces',
+      to: 'Rivera, Terminal',
+      date: 'Martes 15, Julio 2019',
+      seat: 24,
+      bus: 'Omnibus super cama, coche n 02',
+      isCurrent: true,
+    };
+  }
+
   function setUser(user) {
     setState((newState) => ({ ...newState, user }));
   }
@@ -66,6 +78,7 @@ const useGlobalStatus = () => {
     setUser,
     isLoading,
     showLoading,
+    getTicket,
     getTickets,
   };
 };

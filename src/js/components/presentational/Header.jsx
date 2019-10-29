@@ -2,7 +2,7 @@
 
 import React from 'react';
 
-import PrevArrowIcon from '../../icons/prev_arrow.svg';
+import PrevArrowIcon from '../../../icons/prev_arrow.svg';
 
 type Props = {
   title: string,

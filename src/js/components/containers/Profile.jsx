@@ -2,9 +2,9 @@
 
 import React from 'react';
 
-import Header from './header';
-import useGlobalStatus from '../hooks/useGlobaStatus';
-import firebase from '../firebase';
+import Header from '../presentational/Header';
+import useGlobalStatus from '../../hooks/useGlobaStatus';
+import firebase from '../../modules/db';
 
 export default function Dashboard() {
   const { getUser } = useGlobalStatus();

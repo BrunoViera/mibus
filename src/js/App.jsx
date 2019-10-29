@@ -5,12 +5,12 @@ import { Route, Switch } from 'react-router-dom';
 
 import useGlobalStatus from './hooks/useGlobaStatus';
 
-import Footer from './components/footer';
-import Spinner from './components/Spinner';
-import Login from './components/login';
-import Profile from './components/Profile';
-import Tickets from './components/tickets';
-import BuyTicket from './components/BuyTicket';
+import Spinner from './components/presentational/Spinner';
+import Login from './components/containers/Login';
+import Ticket from './components/containers/Ticket';
+import TicketsList from './components/containers/TicketsList';
+import BuyTicket from './components/containers/BuyTicket';
+import Profile from './components/containers/Profile';
 
 function App() {
   const { getUser, showLoading } = useGlobalStatus();
@@ -26,21 +26,20 @@ function App() {
     if (getUser()) {
       view = (
         <Switch>
+          <Route path="/ticket">
+            <Ticket />
+          </Route>
           <Route path="/tickets">
-            <Tickets />
-            <Footer />
+            <TicketsList />
           </Route>
           <Route path="/buy">
             <BuyTicket />
-            <Footer />
           </Route>
           <Route exact path="/">
             <BuyTicket />
-            <Footer />
           </Route>
           <Route exact path="/profile">
             <Profile />
-            <Footer />
           </Route>
         </Switch>
       );

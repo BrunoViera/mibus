@@ -4,9 +4,9 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import HomeIcon from '../../icons/home.svg';
-import ProfileIcon from '../../icons/profile.svg';
-import AgendaIcon from '../../icons/agenda.svg';
+import HomeIcon from '../../../icons/home.svg';
+import ProfileIcon from '../../../icons/profile.svg';
+import AgendaIcon from '../../../icons/agenda.svg';
 
 export default function Footer() {
   const links = [
