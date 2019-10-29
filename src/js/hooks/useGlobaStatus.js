@@ -62,11 +62,11 @@ const useGlobalStatus = () => {
   }
 
   function setUser(user) {
-    setState((state) => ({ ...state, user }));
+    setState((newState) => ({ ...newState, user }));
   }
 
-  function showLoading(loading) {
-    setState((state) => ({ ...state, isLoading: loading }));
+  function showLoading(loading: boolean) {
+    setState((newState) => ({ ...newState, isLoading: loading }));
   }
 
   function isLoading() {

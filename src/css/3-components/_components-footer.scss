@@ -19,9 +19,17 @@
 .btn-list__item {
   padding: 30px 40px;
 
-  &.is-home {
+  &.is-home-nav {
     height: 30px;
     padding: 34px 35px;
+  }
+
+  &.is-active {
+    svg {
+      path {
+        fill: $blue;
+      }
+    }
   }
 
   &:not(:nth-child(1)) {
