@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 
 import Header from '../presentational/Header';

@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 
 import Header from '../presentational/Header';
@@ -25,7 +23,7 @@ export default function Tickets() {
 
   return (
     <div className="layout">
-      <Header title="Mis pasaje" />
+      <Header title="Mi pasaje" previousUrl="/" />
       { renderView() }
       <Footer />
     </div>

@@ -1,5 +1,3 @@
-// @flow
-
 import React, { useEffect } from 'react';
 
 import firebase from '../../modules/db';
