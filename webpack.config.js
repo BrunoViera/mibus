@@ -2,7 +2,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   devServer: {
-    https: true,
+    https: false,
     historyApiFallback: true,
   },
   entry: './src/js/index.jsx',
