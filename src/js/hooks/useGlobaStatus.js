@@ -61,7 +61,7 @@ const useGlobalStatus = () => {
     };
   }
 
-  function setUser(user) {
+  function setUser(user: {}) {
     setState((newState) => ({ ...newState, user }));
   }
 

@@ -1,5 +1,3 @@
-// @flow
-
 import React from 'react';
 import useGlobalStatus from '../../hooks/useGlobaStatus';
 
