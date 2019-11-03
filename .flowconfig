@@ -15,6 +15,7 @@
 ./src/*
 
 [libs]
+./type-def-libs
 
 [lints]
 
@@ -24,7 +25,7 @@ all=true
 module.file_ext=.js
 module.file_ext=.jsx
 module.file_ext=.json
-module.file_ext=.css
-module.file_ext=.scss
+module.name_mapper='.*\(.scss\)' -> 'SCSSModule'
+module.system=haste
 
 [strict]
