@@ -10,7 +10,7 @@ type Props = {
 const AppContext = React.createContext([{}, () => {}]);
 
 const AppProvider = (props: Props) => {
-  const [state, setState] = useState({});
+  const [state, setState] = useState({ isLoading: true });
   const { children } = props;
 
   return (
