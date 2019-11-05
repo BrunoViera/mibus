@@ -15,6 +15,10 @@ export default function Login() {
               if (doc.exists) {
                 setUser(doc);
                 showLoading(false);
+
+                if (window.location.pathname === '/login') {
+                  window.location = '/';
+                }
               } else {
                 const newUser = {
                   nombre: logedUser.displayName,
@@ -25,6 +29,10 @@ export default function Login() {
                 doc.ref.set(newUser).then(() => {
                   setUser(newUser);
                   showLoading(false);
+
+                  if (window.location.pathname === '/login') {
+                    window.location = '/';
+                  }
                 }).catch((error) => {
                   console.error(error);
                 });

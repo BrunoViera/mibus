@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/BrunoViera/mibus#readme",
   "dependencies": {
+    "@babel/runtime": "^7.7.0",
     "firebase": "^7.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -26,6 +27,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.6.4",
+    "@babel/plugin-transform-runtime": "^7.6.2",
     "@babel/preset-env": "^7.6.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
