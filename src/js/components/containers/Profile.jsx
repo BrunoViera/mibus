@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Header from '../presentational/Header';
-import useGlobalStatus from '../../hooks/useGlobaStatus';
+import useGlobalStatus from '../../hooks/useGlobalStatus';
 import firebase from '../../modules/db';
 
 export default function Dashboard() {

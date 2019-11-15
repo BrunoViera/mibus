@@ -5,7 +5,7 @@ import Footer from '../presentational/Footer';
 import Ticket from '../presentational/Ticket';
 import Spinner from '../presentational/Spinner';
 
-import useGlobalStatus from '../../hooks/useGlobaStatus';
+import useGlobalStatus from '../../hooks/useGlobalStatus';
 
 export default function Tickets() {
   const { getTicket } = useGlobalStatus();

@@ -3,7 +3,7 @@ import React from 'react';
 import Header from '../presentational/Header';
 import Footer from '../presentational/Footer';
 import Ticket from '../presentational/Ticket';
-import useGlobalStatus from '../../hooks/useGlobaStatus';
+import useGlobalStatus from '../../hooks/useGlobalStatus';
 
 export default function Tickets() {
   const { getTickets } = useGlobalStatus();
