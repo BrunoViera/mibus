@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 
 import firebase from '../../modules/db';
-import useGlobalStatus from '../../hooks/useGlobaStatus';
+import useGlobalStatus from '../../hooks/useGlobalStatus';
 
 export default function Login() {
   const { setUser, showLoading } = useGlobalStatus();

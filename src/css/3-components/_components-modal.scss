@@ -1,0 +1,79 @@
+.modal {
+  position: fixed;
+  z-index: 2;
+  right: 50%;
+  bottom: 0;
+  transform: translateX(50%);
+  width: 100%;
+  overflow: hidden;
+  transition: .6s cubic-bezier(0.86, 0, 0.07, 1);
+  height: 0px;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-delay: 0.1s;
+
+  &--is-active {
+    height: 100%;
+    background-color: white;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+  }
+}
+
+.modal__close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border-radius: 50%;
+  color: $blue;
+  height: 23px;
+  width: 23px;
+  border: 1px solid $blue;
+}
+
+.bus {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 50px 30px 0;
+  justify-content: space-between;
+}
+
+.bus__row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 40%;
+}
+
+.bus__seat {
+  border: 1px solid $blue;
+  height: 50px;
+  margin-bottom: 10px;
+  position: relative;
+  text-align: center;
+  width: 50px;
+
+  button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: transparent;
+    width: 100%;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  &:active,
+  &:focus {
+    background-color: $blue;
+
+    button {
+      color: $white;
+    }
+  }
+}

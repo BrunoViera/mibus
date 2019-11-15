@@ -1,5 +1,5 @@
 import React from 'react';
-import useGlobalStatus from '../../hooks/useGlobaStatus';
+import useGlobalStatus from '../../hooks/useGlobalStatus';
 
 export default function Spinner() {
   const { isLoading } = useGlobalStatus();

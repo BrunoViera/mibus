@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import useGlobalStatus from './hooks/useGlobaStatus';
+import useGlobalStatus from './hooks/useGlobalStatus';
 
 import Spinner from './components/presentational/Spinner';
 import Login from './components/containers/Login';
